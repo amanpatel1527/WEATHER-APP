@@ -1,0 +1,271 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+/* Root items start */
+:root {
+  --colorDark1: #112d4e;
+  --colorDark2: #3f72af;
+  --colorLight1: #dbe2ef;
+  --colorLight2: #f9f7f7;
+}
+
+/* Root items End */
+
+/* Body */
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  color: var(--colorLight2);
+  overflow: hidden;
+  background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 20px;
+}
+
+.tab-container {
+  width: 90%;
+  max-width: 550px;
+  margin: 0 auto;
+  margin-top: 4rem;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-between;
+  /* border: 1px solid black; */
+}
+
+/* show a tab Your location & Search weather tab */
+.tab {
+  cursor: pointer;
+  font-size: 0.875rem;
+  letter-spacing: 1.75px;
+  padding: 5px 8px;
+}
+
+/* js ki wajha se add horhi hn ye class  */
+.current-tab {
+  background-color: rgba(219, 226, 239, 0.5);
+  border-radius: 4px;
+}
+
+.weather-container {
+  margin-block: 4rem;
+}
+
+/* Button's */
+.btn {
+  all: unset;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  border-radius: 5px;
+  background-color: var(--colorDark2);
+  cursor: pointer;
+  padding: 10px 30px;
+  margin-bottom: 10px;
+}
+
+.sub-container {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* grant location access */
+.grant-location-container.active {
+  display: flex;
+}
+
+.grant-location-container img {
+  margin-bottom: 2rem;
+}
+
+.grant-location-container p:first-of-type {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.grant-location-container p:last-of-type {
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-top: 0.75rem;
+  margin-bottom: 1.75rem;
+  letter-spacing: 0.75px;
+}
+
+/* Loading Container start */
+.loading-container {
+  display: none;
+}
+
+.loading-container.active {
+  display: flex;
+}
+
+.loading-container p {
+  text-transform: uppercase;
+}
+
+/* Loading Container End */
+
+/* User Container Start */
+.user-info-container {
+  display: none;
+}
+
+.user-info-container.active {
+  display: flex;
+}
+
+.user-info-container p {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.user-info-container img {
+  width: 90px;
+  height: 90px;
+}
+
+.user-info-container p {
+  font-size: 2rem;
+  font-weight: 700;
+}
+/* User Container End */
+
+/* show a name's : city , Temp , flag icon , description */
+.name {
+  display: flex;
+  align-items: center;
+  gap: 0 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.name p {
+  font-size: 2rem;
+}
+
+.name img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+/* bottom three box's */
+.parameter-container {
+  width: 90%;
+  display: flex;
+  gap: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  margin: 1.6rem auto 0;
+}
+
+/* Wind speed , Humidity , Cloudiness */
+.parameter {
+  width: 30%;
+  max-width: 200px;
+  background-color: rgb(219, 226, 239, 0.5);
+  border-radius: 5px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px 0;
+  align-items: center;
+}
+
+.parameter img {
+  width: 50px;
+  height: 50px;
+}
+
+.parameter p:first-of-type {
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.parameter p:last-of-type {
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+/* Search Bar form */
+
+/* Form container start */
+.form-container {
+  display: none;
+  width: 90%;
+  max-width: 550px;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0 10px;
+  /* display: flex; */
+}
+
+.form-container.active {
+  scale: 1;
+  opacity: 1;
+  display: flex;
+}
+
+.form-container input {
+  width: calc(100% - 80px);
+  height: 40px;
+  padding: 0 20px;
+  background-color: rgb(219, 226, 239, 0.5);
+  border-radius: 10px;
+}
+
+.form-container input::placeholder {
+  color: rgb(255, 255, 255, 0.7);
+}
+
+.form-container input:focus {
+  outline: 3px solid rgb(255, 255, 255, 0.7);
+}
+
+.form-container .btn {
+  padding: unset;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  margin-bottom: 1px;
+}
+/* Form container End */
+
+/* Error Container Start */
+.errorContainer {
+  display: none;
+}
+
+.errorContainer.active {
+  display: flex;
+  gap: 1rem 0;
+}
+
+.errorContainer p {
+  text-align: center;
+}
+
+.errorContainer img {
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+/* Error Container End */
